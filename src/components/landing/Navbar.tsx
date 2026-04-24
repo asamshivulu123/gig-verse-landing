@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Menu, X, Zap } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { WHATSAPP_LINK } from "@/lib/constants";
+import logo from "@/assets/gigverse-logo.png";
 
 const links = [
   { label: "How It Works", href: "#how" },
@@ -32,10 +33,8 @@ const Navbar = () => {
     >
       <div className="container">
         <div className={`glass rounded-2xl px-4 sm:px-6 py-3 flex items-center justify-between transition-all duration-300 ${scrolled ? "shadow-elegant" : "shadow-soft"}`}>
-          <a href="#" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 rounded-xl bg-gradient-primary flex items-center justify-center shadow-glow">
-              <Zap className="w-5 h-5 text-primary-foreground" fill="currentColor" />
-            </div>
+          <a href="#" className="flex items-center gap-2 group" aria-label="Gig Verse home">
+            <img src={logo} alt="Gig Verse logo" className="h-9 w-9 object-contain" />
             <span className="font-display font-bold text-xl tracking-tight">
               Gig <span className="text-gradient">Verse</span>
             </span>
