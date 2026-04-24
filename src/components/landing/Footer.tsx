@@ -1,4 +1,5 @@
 import { Zap, Mail, Phone } from "lucide-react";
+import { CONTACT_EMAIL, CONTACT_EMAIL_HREF, CONTACT_PHONE, CONTACT_PHONE_HREF } from "@/lib/constants";
 
 const Footer = () => {
   return (
@@ -32,8 +33,14 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-semibold mb-3">Contact</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li className="flex items-center gap-2"><Mail className="w-4 h-4 text-primary" /> example@email.com</li>
-              <li className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary" /> +91 XXXXX XXXXX</li>
+              <li className="flex items-center gap-2">
+                <Mail className="w-4 h-4 text-primary" />
+                <a href={CONTACT_EMAIL_HREF} className="hover:text-primary transition-colors">{CONTACT_EMAIL}</a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-primary" />
+                <a href={CONTACT_PHONE_HREF} className="hover:text-primary transition-colors">{CONTACT_PHONE}</a>
+              </li>
             </ul>
           </div>
         </div>
