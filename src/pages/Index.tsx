@@ -1,5 +1,6 @@
 import Navbar from "@/components/landing/Navbar";
 import Hero from "@/components/landing/Hero";
+import ForBusinesses from "@/components/landing/ForBusinesses";
 import HowItWorks from "@/components/landing/HowItWorks";
 import Features from "@/components/landing/Features";
 import GigTypes from "@/components/landing/GigTypes";
@@ -30,6 +31,7 @@ const Index = () => {
     <main className="min-h-screen bg-background overflow-x-hidden">
       <Navbar />
       <Hero />
+      <ForBusinesses />
       <Clients />
       <HowItWorks />
       <Features />
