@@ -1,16 +1,46 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navbar from "@/components/landing/Navbar";
+import Hero from "@/components/landing/Hero";
+import HowItWorks from "@/components/landing/HowItWorks";
+import Features from "@/components/landing/Features";
+import GigTypes from "@/components/landing/GigTypes";
+import Clients from "@/components/landing/Clients";
+import Testimonials from "@/components/landing/Testimonials";
+import CTA from "@/components/landing/CTA";
+import Contact from "@/components/landing/Contact";
+import Footer from "@/components/landing/Footer";
+import WhatsAppFloat from "@/components/landing/WhatsAppFloat";
+import { useEffect } from "react";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  useEffect(() => {
+    document.title = "Gig Verse — Earn Money with Quick Gigs Near You";
+    const setMeta = (name: string, content: string) => {
+      let el = document.querySelector(`meta[name="${name}"]`);
+      if (!el) {
+        el = document.createElement("meta");
+        el.setAttribute("name", name);
+        document.head.appendChild(el);
+      }
+      el.setAttribute("content", content);
+    };
+    setMeta("description", "Join Gig Verse on WhatsApp and start earning through short-time gigs near you. Verified gigs, flexible hours, instant updates — no signup needed.");
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
+    <main className="min-h-screen bg-background overflow-x-hidden">
+      <Navbar />
+      <Hero />
+      <Clients />
+      <HowItWorks />
+      <Features />
+      <GigTypes />
+      <Testimonials />
+      <CTA />
+      <Contact />
+      <Footer />
+      <WhatsAppFloat />
+    </main>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
