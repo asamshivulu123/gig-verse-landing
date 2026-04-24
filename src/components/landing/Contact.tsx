@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Mail, Phone, MessageCircle, Users } from "lucide-react";
-import { WHATSAPP_LINK } from "@/lib/constants";
+import { WHATSAPP_LINK, CONTACT_EMAIL, CONTACT_EMAIL_HREF, CONTACT_PHONE, CONTACT_PHONE_HREF } from "@/lib/constants";
 
 const Contact = () => {
   return (
@@ -27,8 +27,8 @@ const Contact = () => {
         <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {[
             { icon: Users, label: "Team", value: "Gig Verse Team" },
-            { icon: Mail, label: "Email", value: "example@email.com", href: "mailto:example@email.com" },
-            { icon: Phone, label: "Phone", value: "+91 XXXXX XXXXX", href: "tel:+91" },
+            { icon: Mail, label: "Email", value: CONTACT_EMAIL, href: CONTACT_EMAIL_HREF },
+            { icon: Phone, label: "Phone", value: CONTACT_PHONE, href: CONTACT_PHONE_HREF },
           ].map((c, i) => (
             <motion.a
               key={c.label}
