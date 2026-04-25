@@ -4,6 +4,7 @@ import foundersMic from "@/assets/clients/founders-mic.jpg";
 import studentSpot from "@/assets/clients/student-spot.jpg";
 import jatayuvAi from "@/assets/clients/jatayuv-ai.jpg";
 import consistencyAi from "@/assets/clients/consistency-ai.jpg";
+import katyaniMedia from "@/assets/clients/katyani-media.jpg";
 
 const clients = [
   { name: "Founders Hub", logo: foundersHub },
@@ -11,6 +12,7 @@ const clients = [
   { name: "The Student Spot", logo: studentSpot },
   { name: "Jatayuv AI", logo: jatayuvAi },
   { name: "Consistency.AI", logo: consistencyAi },
+  { name: "Katyani Media", logo: katyaniMedia },
 ];
 
 const Clients = () => {
