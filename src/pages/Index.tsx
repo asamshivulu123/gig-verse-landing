@@ -8,6 +8,7 @@ import Clients from "@/components/landing/Clients";
 import Testimonials from "@/components/landing/Testimonials";
 import CTA from "@/components/landing/CTA";
 import Contact from "@/components/landing/Contact";
+import BusinessContactForm from "@/components/landing/BusinessContactForm";
 import Footer from "@/components/landing/Footer";
 import WhatsAppFloat from "@/components/landing/WhatsAppFloat";
 import { useEffect } from "react";
@@ -39,6 +40,7 @@ const Index = () => {
       <Testimonials />
       <CTA />
       <Contact />
+      <BusinessContactForm />
       <Footer />
       <WhatsAppFloat />
     </main>
