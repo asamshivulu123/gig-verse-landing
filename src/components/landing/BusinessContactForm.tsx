@@ -2,9 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Building2 } from "lucide-react";
 
-// 👉 Replace this with your actual JotForm ID (the numeric ID at the end of your JotForm URL,
-// e.g. https://form.jotform.com/250000000000000  ->  "250000000000000")
-const JOTFORM_ID = "250000000000000";
+const JOTFORM_ID = "261141448390454";
 
 const BusinessContactForm = () => {
   const iframeRef = useRef<HTMLIFrameElement>(null);
