@@ -1,6 +1,17 @@
 import { motion } from "framer-motion";
+import foundersHub from "@/assets/clients/founders-hub.png";
+import foundersMic from "@/assets/clients/founders-mic.jpg";
+import studentSpot from "@/assets/clients/student-spot.jpg";
+import jatayuvAi from "@/assets/clients/jatayuv-ai.jpg";
+import consistencyAi from "@/assets/clients/consistency-ai.jpg";
 
-const clients = ["QuickMart", "UrbanEats", "EventPro", "LocalKart", "CityServices", "FastDelivery", "BrightCo", "ZipCart"];
+const clients = [
+  { name: "Founders Hub", logo: foundersHub },
+  { name: "Founders Mic", logo: foundersMic },
+  { name: "The Student Spot", logo: studentSpot },
+  { name: "Jatayuv AI", logo: jatayuvAi },
+  { name: "Consistency.AI", logo: consistencyAi },
+];
 
 const Clients = () => {
   return (
@@ -26,11 +37,14 @@ const Clients = () => {
             {[...clients, ...clients].map((c, i) => (
               <div
                 key={i}
-                className="flex items-center justify-center min-w-[180px] h-16 px-6 rounded-2xl glass-card grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                className="flex items-center justify-center min-w-[200px] h-24 px-6 rounded-2xl glass-card bg-white/95 hover:scale-105 transition-all duration-300"
               >
-                <span className="font-display font-bold text-lg text-foreground/80 whitespace-nowrap">
-                  {c}
-                </span>
+                <img
+                  src={c.logo}
+                  alt={`${c.name} logo`}
+                  loading="lazy"
+                  className="max-h-16 max-w-[160px] w-auto h-auto object-contain"
+                />
               </div>
             ))}
           </div>
